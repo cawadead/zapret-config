@@ -1,6 +1,3 @@
-deepseek.com
-chat.deepseek.com
-cdn.deepseek.com
 tiktok.com
 tiktok.net
 v.tiktok.net
