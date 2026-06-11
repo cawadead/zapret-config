@@ -49,4 +49,6 @@ ns-1574.awsdns-04.co.uk
 tiktokcdn-com.akamaized.net
 vk.com
 battle.net
-github.com
+nvidia.com
+download.nvidia.com
+nvidiagrid.net
