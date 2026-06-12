@@ -52,3 +52,4 @@ battle.net
 nvidia.com
 download.nvidia.com
 nvidiagrid.net
+2ip.ru

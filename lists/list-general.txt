@@ -335,3 +335,4 @@ sync.1rx.io
 zdbb.net
 id5-sync.com
 assets.twitch.tv
+ntc.party
