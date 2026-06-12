@@ -1,6 +1,17 @@
+
+### NFQWS_PORTS_TCP
+```
+12,80,443,2053,2083,2087,2096,8443
+```
+### NFQWS_PORTS_UDP
+```
+443,1400,6457-6463,19294-19344,50000-61000
+```
+### NFQWS_OPT
+```
 --filter-tcp=80,443 --hostlist=/app/data/lists/list-general.txt --hostlist-exclude=/app/data/lists/list-exclude.txt --dpi-desync=hostfakesplit --dpi-desync-repeats=4 --dpi-desync-fooling=ts,md5sig --dpi-desync-hostfakesplit-mod=host=ozon.ru --new
 --filter-udp=443 --hostlist=/app/data/lists/list-general.txt --hostlist-exclude=/app/data/lists/list-exclude.txt --dpi-desync=fake --dpi-desync-repeats=11 --dpi-desync-fake-quic=/opt/zapret/files/fake/quic_initial_www_google_com.bin --new
---filter-l7=discord,stun --dpi-desync=fake --dpi-desync-fake-discord="/app/data/lists/quic_initial_dbankcloud_ru.bin" --dpi-desync-fake-stun="/app/data/lists/quic_initial_dbankcloud_ru.bin" --dpi-desync-repeats=6 --new
+--filter-l7=discord,stun --dpi-desync=fake --dpi-desync-fake-discord=/app/data/lists/quic_initial_dbankcloud_ru.bin --dpi-desync-fake-stun=/app/data/lists/quic_initial_dbankcloud_ru.bin --dpi-desync-repeats=6 --new
 --filter-tcp=80 --hostlist=/app/data/lists/list-general.txt --hostlist-exclude=/app/data/lists/list-exclude.txt --dpi-desync=fake,fakedsplit --dpi-desync-autottl=2 --dpi-desync-fooling=md5sig --new
 --filter-tcp=2053,2083,2087,2096,8443 --hostlist-domains=discord.media --dpi-desync=fake,multisplit --dpi-desync-split-seqovl=681 --dpi-desync-split-pos=1 --dpi-desync-fooling=ts --dpi-desync-repeats=8 --dpi-desync-split-seqovl-pattern=/opt/zapret/files/fake/tls_clienthello_www_google_com.bin --dpi-desync-fake-tls-mod=rnd,dupsid,sni=www.google.com --new
 --filter-tcp=443 --hostlist=/app/data/lists/list-general.txt --hostlist-exclude=/app/data/lists/list-exclude.txt --dpi-desync=fake,multisplit --dpi-desync-split-seqovl=681 --dpi-desync-split-pos=1 --dpi-desync-fooling=ts --dpi-desync-repeats=8 --dpi-desync-split-seqovl-pattern=/opt/zapret/files/fake/tls_clienthello_www_google_com.bin --dpi-desync-fake-tls-mod=rnd,dupsid,sni=www.google.com --new
@@ -17,3 +28,4 @@
 --filter-tcp=443,2053,2083,2087,2096,8443 --ipset=/app/data/cidrs/scaleway-cidr.txt --ipset-exclude=/app/data/lists/ipset-exclude.txt --hostlist-exclude=/app/data/lists/list-exclude.txt --dpi-desync=fake,multisplit --dpi-desync-split-seqovl=681 --dpi-desync-split-pos=1 --dpi-desync-fooling=ts --dpi-desync-repeats=8 --dpi-desync-split-seqovl-pattern=/opt/zapret/files/fake/tls_clienthello_www_google_com.bin --dpi-desync-fake-tls-mod=rnd,dupsid,sni=www.google.com --new
 --filter-tcp=443,2053,2083,2087,2096,8443 --ipset=/app/data/cidrs/contabo-cidr.txt --ipset-exclude=/app/data/lists/ipset-exclude.txt --hostlist-exclude=/app/data/lists/list-exclude.txt --dpi-desync=fake,multisplit --dpi-desync-split-seqovl=681 --dpi-desync-split-pos=1 --dpi-desync-fooling=ts --dpi-desync-repeats=8 --dpi-desync-split-seqovl-pattern=/opt/zapret/files/fake/tls_clienthello_www_google_com.bin --dpi-desync-fake-tls-mod=rnd,dupsid,sni=www.google.com --new
 --filter-tcp=443,2053,2083,2087,2096,8443 --ipset=/app/data/cidrs/cdn77-cidr.txt --ipset-exclude=/app/data/lists/ipset-exclude.txt --hostlist-exclude=/app/data/lists/list-exclude.txt --dpi-desync=fake,multisplit --dpi-desync-split-seqovl=681 --dpi-desync-split-pos=1 --dpi-desync-fooling=ts --dpi-desync-repeats=8 --dpi-desync-split-seqovl-pattern=/opt/zapret/files/fake/tls_clienthello_www_google_com.bin --dpi-desync-fake-tls-mod=rnd,dupsid,sni=www.google.com --new
+```
